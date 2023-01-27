@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Matthias Wettstein">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<!-- base element: https://www.w3schools.com/htmL/html_head.asp -->
+		
+		<title>Ellesmere</title>
+		
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="css/media.css">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+		   		$('#header').load("header.html");
+			});
+			
+			$(document).ready(function(){
+		   		$('#sidebar').load("sidebar.html");
+			});
+		</script>
+	</head>
+	
+	<body>
+		<header id="header"></header>
+		<nav id="sidebar"></nav>
+		
+		<main>
+			
+			<p>todo -- video</p>
+		
+		</main>
+		
+	</body>
+</html>
