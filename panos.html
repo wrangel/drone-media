@@ -17,12 +17,24 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-		<script src="panos.js"></script>
-</head>
+		
+		<script>
+			$(document).ready(function(){
+		   		$('#header').load("header.html");
+			});
+			
+			$(document).ready(function(){
+		   		$('#sidebar').load("sidebar.html");
+			});
+		</script>
+	</head>
 	
 	<body>
-<main>
-	<section class="media-grid">
+		<header id="header"></header>
+		<nav id="sidebar"></nav>
+		
+		<main>
+			<section class="media-grid">
 				
 				<div>
 					<div class="thumbnail-row">
@@ -36,8 +48,9 @@
 							<p class="media-title">Zürich &#183; Switzerland</p>
 							<p class="media-stats">2023-01-21 &#183; 11:00</p>
 							<div style="display: flex; justify-content: space-between;">
-								<p class="media-author">Matthias</p>
-</div>
+								<p class="media-author">Matthias</p>	
+								<p id="media-counter"></p>
+							</div>
 						</div>
 					</div>
 				</div>
