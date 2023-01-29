@@ -15,9 +15,11 @@
 		<div id="viewer" style="width: 100vw; height: 100vh;"></div>
 		
 		<script>
+			const img = window.location.search.split('=')[1]
+			
 			const viewer = new PhotoSphereViewer.Viewer({
 				container: document.querySelector('#viewer'),
-				panorama: '../media/pano/100_0156.jpeg',
+				panorama: '../media/pano/' + img + '.jpeg',
 			});
 		</script>
 	</body>

@@ -1,26 +1,226 @@
 <!doctype html>
 <html>
 	<head>
-		<!-- for optimal display on high DPI devices -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Matthias Wettstein">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<!-- base element: https://www.w3schools.com/htmL/html_head.asp -->
 		
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+		<title>Ellesmere</title>
 		
-		<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="css/media.css">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+		   		$('#header').load("header.html");
+			});
+			
+			$(document).ready(function(){
+		   		$('#sidebar').load("sidebar.html");
+			});
+		</script>
 	</head>
 	
 	<body>
-		<!-- the viewer container must have a defined size -->
-		<div id="viewer" style="width: 100vw; height: 100vh;"></div>
+		<header id="header"></header>
+		<nav id="sidebar"></nav>
 		
-		<script>
-			const img = window.location.search.split('=')[1]
+		<main>
+			<section class="media-grid">
+				
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-viewer.html?img=100_0282" onclick="countUp()"><img class="thumbnail" src="media/thumbnails/100_0282.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/matthias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Zürich &#183; Switzerland</p>
+							<p class="media-stats">2023-01-21 &#183; 11:00</p>
+							<div style="display: flex; justify-content: space-between;">
+								<p class="media-author">Matthias</p>	
+								<p id="media-counter"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0222.html"><img class="thumbnail" src="media/thumbnails/100_0222.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/elias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Strihe &#183; Switzerland</p>
+							<p class="media-stats">2023-01-07 &#183; 15:23</p>
+							<p class="media-author">Elias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="video-preview">
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/ZH 2023-02-01.html"><img class="thumbnail" src="media/thumbnails/ZH 2023-02-01.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/matthias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Zürich &#183; Switzerland</p>
+							<p class="media-stats">2023-01-02</p>
+							<p class="media-author">Matthias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/Chamonix 2022-12-26.html"><img class="thumbnail" src="media/thumbnails/Chamonix 2022-12-26.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/elias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Chamonix &#183; France </p>
+							<p class="media-stats">2022-12-26</p>
+							<p class="media-author">Matthias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0186.html"><img class="thumbnail" src="media/thumbnails/100_0186.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/matthias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Studen SZ &#183; Switzerland</p>
+							<p class="media-stats">2022-12-18 &#183; 15:59</p>
+							<p class="media-author">Matthias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0167.html"><img class="thumbnail" src="media/thumbnails/100_0167.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/matthias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Sternenberg &#183; Switzerland</p>
+							<p class="media-stats">2022-12-11 &#183; 16:22</p>
+							<p class="media-author">Matthias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0156.html"><img class="thumbnail" src="media/thumbnails/100_0156.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/matthias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Sternenberg &#183; Switzerland</p>
+							<p class="media-stats">2022-12-11 &#183; 16:08</p>
+							<p class="media-author">Matthias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0147.html"><img class="thumbnail" 		src="media/thumbnails/100_0147.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/matthias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Sternenberg &#183; Switzerland</p>
+							<p class="media-stats">2022-12-11 &#183; 15:59</p>
+							<p class="media-author">Matthias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0139.html"><img class="thumbnail" src="media/thumbnails/100_0139.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/matthias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Bockmattlipass &#183; Switzerland</p>
+							<p class="media-stats">2022-12-04 &#183; 15:25</p>
+							<p class="media-author">Matthias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+	
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0079.html"><img class="thumbnail" src="media/thumbnails/100_0079.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/elias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Zürich &#183; Switzerland</p>
+							<p class="media-stats">2022-11-19 &#183; 14:32</p>
+							<p class="media-author">Elias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div class="thumbnail-row">
+						<a target="_blank" rel="noopener" href="pano-html/100_0056.html" onclick="countUp()">
+							<img class="thumbnail" src="media/thumbnails/100_0056.webp" alt="Drone Media Here"></a>
+					</div>
+					<div class="media-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="media/channel-pictures/elias.webp" alt="Channel Picture Here">
+						</div>
+						<div>
+							<p class="media-title">Zürich &#183; Switzerland</p>
+							<p class="media-stats">2022-11-06 &#183; 11:41</p>
+							<p class="media-author">Elias &#183; X views</p>
+						</div>
+					</div>
+				</div>
+				
+			</section> 
 			
-			const viewer = new PhotoSphereViewer.Viewer({
-				container: document.querySelector('#viewer'),
-				panorama: '../media/pano/' + img + '.jpeg',
-			});
-		</script>
+		</main>
+		
+  		<script src="js/counter.js"></script>
+		
 	</body>
 </html>
