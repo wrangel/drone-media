@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/img.css">
+	</head>
+		<body>
+			
+			<script>
+				/* Get the passed-on parameters */
+				const info = window.location.search.split('&').map(a => a.split('='));
+				const image_type = info[0][1];
+				const image_name = info[1][1];
+				const style = "--image: url('../media/" + image_type + '/' + image_name + ".webp');"
+				
+				/* Add a div to the body which acts as the container for the background image */
+				const el = document.createElement('div');
+				el.className = "bg-image";
+				el.style = style;
+				document.body.appendChild(el);
+			</script>
+
+	</body>
+</html>
