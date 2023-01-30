@@ -39,6 +39,10 @@
 		</nav>
 		
 		<script>
+			const info = window.location.search;
+			console.log(info);
+			
+			
 			const sidebar_el = document.querySelector('.sidebar');
 			sidebar_el.style.cssText = 'background-color: transparent';
 			
@@ -46,7 +50,12 @@
 			const sidebar_div_el = document.querySelector('.sidebar').getElementsByTagName('div')
 			
 			Array.from(sidebar_img_el).concat(Array.from(sidebar_div_el))
-				.map(a => a.style.cssText = 'filter: invert(100%)')
+				.map(x => x.style.cssText = 'filter: invert(100%)')
+			
+			//not run
+			const sidebar_hover_el = window.getComputedStyle(document.querySelector('.sidebar'), ':hover');
+			Array.from(sidebar_hover_el).map(x => x.style.cssText = 'background-color: darkblue')
+		
 			
 			// todo: Font color, hover, conditional (window.location.search)
 			
