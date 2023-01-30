@@ -1,6 +1,7 @@
 /* CSS Document */
+
 .sidebar {
-	background-color: transparent; /* bei home, sonst white */
+	background-color: white;
 	position: fixed;
 	left: 0;
 	bottom: 0;
@@ -28,10 +29,25 @@
 .sidebar-link img {
 	height: 24px;
 	margin-bottom: 4px;
-	filter: invert(100%); /* bei home */
 }
 
 .sidebar-link div {
 	font-size: 10px;
-	filter: invert(100%); /* bei home */
 }
+
+
+
+/* Conditional block start */
+.sidebar {
+	background-color: transparent;
+}
+
+.sidebar-link img,
+.sidebar-link div {
+	filter: invert(100%);
+}
+
+.sidebar-link:hover {
+	background-color: darkblue;
+}
+/* Conditional block end */
