@@ -8,6 +8,7 @@
 	</head>
 	
 	<body>
+		
 		<nav class="sidebar">
 			<a href="index.html" rel="noreferrer noopener" class="sidebar-link">
 				<img src="media/icons/sidebar/home.svg" alt="Page Icon Here">
@@ -36,5 +37,18 @@
 				<div>About Us</div>
 			</a>
 		</nav>
+		
+		<script>
+			const sidebar_el = document.querySelector('.sidebar');
+			sidebar_el.style.cssText = 'background-color: transparent';
+			
+			const sidebar_img_el = document.querySelector('.sidebar').getElementsByTagName('img')
+			const sidebar_div_el = document.querySelector('.sidebar').getElementsByTagName('div')
+			
+			Array.from(sidebar_img_el).concat(Array.from(sidebar_div_el))
+				.map(a => a.style.cssText = 'filter: invert(100%)')
+			
+		</script>
+			
 	</body>
 </html>
