@@ -20,7 +20,7 @@
 			</a>
 			<a href="wide-angle.html" rel="noreferrer noopener" class="sidebar-link">
 				<img src="media/icons/sidebar/lens.svg" alt="Page Icon Here">
-				<div>Wide-Angle</div>
+				<div>Wide Angle</div>
 			</a>
 			<a href="hdr.html" rel="noreferrer noopener" class="sidebar-link">
 				<img src="media/icons/sidebar/hdr.svg" alt="Page Icon Here">
@@ -39,25 +39,18 @@
 		</nav>
 		
 		<script>
+			
+			// not run
 			const info = window.location.search;
 			console.log(info);
 			
-			
+			// Apply transparent background to sidebar
 			const sidebar_el = document.querySelector('.sidebar');
-			sidebar_el.style.cssText = 'background-color: transparent';
+			sidebar_el.style.background = 'transparent';
 			
-			const sidebar_img_el = document.querySelector('.sidebar').getElementsByTagName('img')
-			const sidebar_div_el = document.querySelector('.sidebar').getElementsByTagName('div')
-			
-			Array.from(sidebar_img_el).concat(Array.from(sidebar_div_el))
-				.map(x => x.style.cssText = 'filter: invert(100%)')
-			
-			//not run
-			const sidebar_hover_el = window.getComputedStyle(document.querySelector('.sidebar'), ':hover');
-			Array.from(sidebar_hover_el).map(x => x.style.cssText = 'background-color: darkblue')
-		
-			
-			// todo: Font color, hover, conditional (window.location.search)
+			// Apply inversion effect to all text and icons
+			['img', 'div'].map(el => Array.from(document.querySelector('.sidebar').getElementsByTagName(el))).flat()
+				.forEach(x => x.style.cssText = 'filter: invert(100%)')
 			
 		</script>
 			
