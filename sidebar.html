@@ -45,18 +45,18 @@
 			sidebar_el.style.background = 'transparent';
 
 			// Apply inversion effect to all text and icons
-			['img', 'div'].flatMap(el => Array.from(document.querySelector('.sidebar').getElementsByTagName(el)))
-			.forEach(x => x.style.cssText = 'filter: invert(100%)');
+			['img', 'div'].flatMap(el1 => Array.from(sidebar_el.getElementsByTagName(el1)))
+			.forEach(el2 => el2.style.cssText = 'filter: invert(100%)');
 			
 			// Apply hover-over color change
 			const hover_array = Array.from(sidebar_el.getElementsByClassName('sidebar-link'));
-			hover_array.forEach(el => el.addEventListener('mouseover', function() {el.style.backgroundColor= 'blue';}));
-			hover_array.forEach(el => el.addEventListener('mouseout', function() {el.style.backgroundColor= 'transparent';}));
+			hover_array.forEach(
+				el => {
+					el.addEventListener('mouseover', function() {el.style.backgroundColor= 'blue';});
+					el.addEventListener('mouseout', function() {el.style.backgroundColor= 'transparent';});
+				}
+			);
 			
-			/* NOT RUN: hover
-			const sidebar_hover_el = window.getComputedStyle(document.querySelector('.sidebar'), ':hover');
-			Array.from(sidebar_hover_el).map(x => x.style.cssText = 'background-color: black') */
-				
 		</script>
 			
 	</body>
