@@ -40,22 +40,25 @@
 		
 		<script>
 			
-			// Apply transparent background to sidebar
-			const sidebar_el = document.querySelector('.sidebar');
-			sidebar_el.style.background = 'transparent';
+			const site_type = localStorage.getItem("type");
+			if(site_type === 'type') {
+				// Apply transparent background to sidebar
+				const sidebar_el = document.querySelector('.sidebar');
+				sidebar_el.style.background = 'transparent';
 
-			// Apply inversion effect to all text and icons
-			['img', 'div'].flatMap(el1 => Array.from(sidebar_el.getElementsByTagName(el1)))
-			.forEach(el2 => el2.style.cssText = 'filter: invert(100%)');
-			
-			// Apply hover-over color change
-			const hover_array = Array.from(sidebar_el.getElementsByClassName('sidebar-link'));
-			hover_array.forEach(
-				el => {
-					el.addEventListener('mouseover', function() {el.style.backgroundColor= 'darkslategrey';});
-					el.addEventListener('mouseout', function() {el.style.backgroundColor= 'transparent';});
-				}
-			);
+				// Apply inversion effect to all text and icons
+				['img', 'div'].flatMap(el1 => Array.from(sidebar_el.getElementsByTagName(el1)))
+				.forEach(el2 => el2.style.cssText = 'filter: invert(100%)');
+
+				// Apply hover-over color change
+				const hover_array = Array.from(sidebar_el.getElementsByClassName('sidebar-link'));
+				hover_array.forEach(
+					el => {
+						el.addEventListener('mouseover', function() {el.style.backgroundColor= 'darkslategrey';});
+						el.addEventListener('mouseout', function() {el.style.backgroundColor= 'transparent';});
+					}
+				);
+			}
 			
 		</script>
 			
