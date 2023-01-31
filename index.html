@@ -19,9 +19,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 		
 		<script>
-			localStorage.setItem("type", "home");
+			// Call to server to get html document. Sending query string to requested html not possible
+			let site_type = 'home';
 			$(document).ready(function(){
-				$('#sidebar').load('sidebar.html');
+				$('#sidebar').load('sidebar-home.html');
 			});
 		</script>
 	</head>
