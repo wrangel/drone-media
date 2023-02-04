@@ -1,3 +1,6 @@
+// This is pure cliient-side, using the Web Storage API (window.localStorage()). Across user persistence is not given.
+// IndexedDB (window.indexedDB()) will not help either, because it is still  on client side
+
 // Global variable (with NULL coalescing: either take existing count, or start from 0)
 let count = +localStorage.getItem('count') ?? 0;
             
