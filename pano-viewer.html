@@ -6,6 +6,7 @@
 		
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
 		<link rel="stylesheet" href="css/pano-viewer.css">
+		<link rel="icon" type="image/x-icon" href="media/icons/favicon/favicon.ico">
 		
 		<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
@@ -18,12 +19,33 @@
 		</div>
 
 		<script>
-			const img = window.location.search.split('=')[1]
+			const img = window.location.search.split('=')[1];
 			
 			const viewer = new PhotoSphereViewer.Viewer({
 				container: document.querySelector('#viewer'),
 				panorama: '../media/pano/' + img + '.jpeg',
+				maxFov: 110, // 90, zoom out
+				minFov: 5, // 30, zoom in
+				defaultZoomLvl: 50,
+				adapter: PhotoSphereViewer.LittlePlanetAdapter,
+				navbar: [
+					'zoom',
+					'fullscreen',
+					{
+					id: 'fisheye',
+					content: '../media/pano-viewer/fisheye.svg',
+					title: 'Fisheye View',
+					className: 'fisheye-button',
+					onClick: (viewer) => {
+						alert('Hello from custom button');
+						},
+					},
+					
+				],
 			});
+			
+			viewer.navbar.getButton('fisheye').show();
+			
 		</script>
 	</body>
 </html>
