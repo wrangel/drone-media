@@ -5,15 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+		<link rel="stylesheet" href="css/pano-viewer.css">
 		
 		<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
 	</head>
 	
 	<body>
-		<!-- the viewer container must have a defined size -->
-		<div id="viewer" style="width: 100vw; height: 100vh;"></div>
-		
+		<div class="outer-box">
+			<!-- the viewer container must have a defined size -->
+			<div id="viewer"></div>
+		</div>
+
 		<script>
 			const img = window.location.search.split('=')[1]
 			
