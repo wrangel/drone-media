@@ -17,3 +17,11 @@ html, body {
 	display: table-cell;
 	vertical-align: middle;
 }
+
+.psv-navbar {
+	background-color: transparent;
+}
+
+.fisheye-button {
+	background-image: url(../media/pano-viewer/fisheye.svg);
+}

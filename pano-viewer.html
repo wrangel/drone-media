@@ -25,26 +25,43 @@
 				container: document.querySelector('#viewer'),
 				panorama: '../media/pano/' + img + '.jpeg',
 				maxFov: 110, // 90, zoom out
-				minFov: 5, // 30, zoom in
+				minFov: 10, // 30, zoom in
 				defaultZoomLvl: 50,
-				adapter: PhotoSphereViewer.LittlePlanetAdapter,
 				navbar: [
 					'zoom',
 					'fullscreen',
-					{
+					{ // create custom button for fisheye
 					id: 'fisheye',
-					content: '../media/pano-viewer/fisheye.svg',
+					content: 'F',
 					title: 'Fisheye View',
 					className: 'fisheye-button',
 					onClick: (viewer) => {
-						alert('Hello from custom button');
+						viewer.setOptions({
+							fisheye: true,
+							maxFov: 150,
+							});
 						},
 					},
-					
+					{ // create custom button for panorama
+					id: 'panorama',
+					content: 'P',
+					title: 'Panorama View',
+					className: 'panorama-button',
+					onClick: (viewer) => {
+						viewer.setOptions({
+							fisheye: false,
+							});
+						},
+					},
 				],
 			});
 			
-			viewer.navbar.getButton('fisheye').show();
+
+			
+			// Clean up cache
+			window.addEventListener('beforeunload', function () {
+            	viewer.destroy();
+        	});	
 			
 		</script>
 	</body>
