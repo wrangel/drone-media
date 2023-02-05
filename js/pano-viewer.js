@@ -45,11 +45,11 @@ const viewer = new PhotoSphereViewer.Viewer({
 			title: 'Panorama view',
 			className: 'panorama-button',
 			onClick: (viewer) => {
-				autorotate.start();
+				///viewer.setPanorama('../media/pano/' + img + '.jpeg');
 				viewer.setOptions({
-					fisheye: 0,
 					maxFov: panoMaxFov,
 				});
+				autorotate.start();
 			},
 		},
 	],
@@ -70,7 +70,7 @@ function intro() {
 	autorotate.stop()
 	new PhotoSphereViewer.utils.Animation({
 		properties: animatedValues,
-		duration: 2500,
+		duration: 6000,
 		easing: 'inOutQuad',
 		onTick: (properties) => {
 			viewer.setOption('fisheye', properties.fisheye);

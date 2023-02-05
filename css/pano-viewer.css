@@ -21,3 +21,7 @@ html, body {
 .psv-navbar {
 	background-color: transparent;
 }
+
+.psv-panel-menu {
+  height: 50%;
+}
