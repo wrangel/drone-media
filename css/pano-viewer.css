@@ -21,7 +21,3 @@ html, body {
 .psv-navbar {
 	background-color: transparent;
 }
-
-#tmp {
-	filter: invert(100);
-}
