@@ -20,6 +20,32 @@
 			<div id="viewer"></div>
 		</div>
 		
+		<!-- Add replay icon -->
+		<script type="text/template" id="replay-icon">
+			<?xml version="1.0" standalone="no"?>
+			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+			 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+			<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+			 width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
+			 preserveAspectRatio="xMidYMid meet">
+
+			<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
+			fill="#ffffff" stroke="none">
+			<path d="M925 1893 c-497 -43 -873 -503 -815 -994 23 -185 95 -350 220 -497
+			l63 -74 -67 -67 -67 -67 221 -38 c122 -21 224 -35 227 -32 6 5 -17 159 -53
+			360 l-16 88 -78 -77 c-48 -47 -82 -75 -90 -70 -28 18 -133 163 -165 229 -76
+			159 -100 364 -60 521 73 289 291 507 580 580 99 25 265 23 370 -4 259 -68 465
+			-260 550 -513 40 -118 46 -295 16 -421 -78 -325 -354 -565 -686 -596 l-70 -6
+			-3 -57 -3 -58 56 0 c122 0 286 51 423 132 73 43 247 217 290 290 54 91 100
+			207 118 297 22 114 15 314 -16 421 -101 349 -407 608 -765 650 -89 10 -102 10
+			-180 3z"/>
+			<path d="M810 976 l0 -336 48 27 c425 244 530 309 519 319 -15 13 -525 310
+			-549 319 -17 7 -18 -13 -18 -329z"/>
+			</g>
+			</svg>
+		</script>
+		
+		<!-- Add fisheye icon -->
 		<script type="text/template" id="fisheye-icon">
 			<?xml version="1.0" standalone="no"?>
 			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
@@ -60,6 +86,7 @@
 			</svg>
 		</script>
 		
+		<!-- Add panorama icon -->
 		<script type="text/template" id="panorama-icon">
 			<?xml version="1.0" standalone="no"?>
 			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
@@ -84,31 +111,8 @@
 			</g>
 			</svg>
 		</script>
-		
-		<script type="text/template" id="replay-icon">
-			<?xml version="1.0" standalone="no"?>
-			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-			 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-			<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-			 width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
-			 preserveAspectRatio="xMidYMid meet">
 
-			<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-			fill="#ffffff" stroke="none">
-			<path d="M925 1893 c-497 -43 -873 -503 -815 -994 23 -185 95 -350 220 -497
-			l63 -74 -67 -67 -67 -67 221 -38 c122 -21 224 -35 227 -32 6 5 -17 159 -53
-			360 l-16 88 -78 -77 c-48 -47 -82 -75 -90 -70 -28 18 -133 163 -165 229 -76
-			159 -100 364 -60 521 73 289 291 507 580 580 99 25 265 23 370 -4 259 -68 465
-			-260 550 -513 40 -118 46 -295 16 -421 -78 -325 -354 -565 -686 -596 l-70 -6
-			-3 -57 -3 -58 56 0 c122 0 286 51 423 132 73 43 247 217 290 290 54 91 100
-			207 118 297 22 114 15 314 -16 421 -101 349 -407 608 -765 650 -89 10 -102 10
-			-180 3z"/>
-			<path d="M810 976 l0 -336 48 27 c425 244 530 309 519 319 -15 13 -525 310
-			-549 319 -17 7 -18 -13 -18 -329z"/>
-			</g>
-			</svg>
-		</script>
-
+		<!--Call the PSV magic -->
 		<script src="js/pano-viewer.js"></script>
 		
 	</body>
