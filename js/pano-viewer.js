@@ -1,6 +1,7 @@
 // JavaScript Document
 const img = window.location.search.split('=')[1];
 const panoMaxFov = 110; // 90, zoom out
+const panoMinFov = 10; // 30, zoom in
 
 const animatedValues = {
 	pitch: { start: -Math.PI / 2, end: -0.1 }, // end: 0.2
@@ -12,23 +13,21 @@ const animatedValues = {
 const viewer = new PhotoSphereViewer.Viewer({
 	container: document.querySelector('#viewer'),
 	panorama: '../media/pano/' + img + '.jpeg',
-	
 	maxFov: panoMaxFov, 
-	minFov: 10, // 30, zoom in
+	minFov: panoMinFov,
 	defaultPitch: animatedValues.pitch.start,
 	defaultYaw: animatedValues.yaw.start,
 	defaultZoomLvl: animatedValues.zoom.end,
-	
 	fisheye: animatedValues.fisheye.start,
 	navbar: [
 		'autorotate',
 		'zoom',
 		'fullscreen',
-		{
+		/*{
 			title: 'Rerun animation',
 			content: document.querySelector('#replay-icon').innerText,
 			onClick: intro,
-		},
+		},*/
 		{ // create custom button for fisheye
 			id: 'fisheye',
 			content: document.querySelector('#fisheye-icon').innerText,
@@ -38,7 +37,7 @@ const viewer = new PhotoSphereViewer.Viewer({
 				autorotate.stop();
 				viewer.setOptions({
 					fisheye: true,
-					maxFov: 170,
+					maxFov: 160,
 				});
 			},
 		},
@@ -48,20 +47,8 @@ const viewer = new PhotoSphereViewer.Viewer({
 			title: 'Panorama view',
 			className: 'panorama-button',
 			onClick: (viewer) => {
-				viewer.setOptions({
-					panorama: true,
-					
-					maxFov: panoMaxFov, 
-					minFov: 10, // 30, zoom in
-					defaultPitch: animatedValues.pitch.start,
-					defaultYaw: animatedValues.yaw.start,
-					defaultZoomLvl: animatedValues.zoom.end,
-					
-					
-				});
-
-				
-				autorotate.start();
+				intro()
+				//autorotate.start(),
 			},
 		},
 	],
