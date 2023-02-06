@@ -45,9 +45,11 @@ const viewer = new PhotoSphereViewer.Viewer({
 			title: 'Panorama view',
 			className: 'panorama-button',
 			onClick: (viewer) => {
-				///viewer.setPanorama('../media/pano/' + img + '.jpeg');
 				viewer.setOptions({
+					panorama: true,
+					fisheye: false,
 					maxFov: panoMaxFov,
+					defaultZoomLvl: animatedValues.zoom.end,
 				});
 				autorotate.start();
 			},
@@ -63,7 +65,10 @@ const viewer = new PhotoSphereViewer.Viewer({
 	],
 });
 
+// Get autorotate plugin
 const autorotate = viewer.getPlugin(PhotoSphereViewer.AutorotatePlugin);
+
+// Start intro before first rendering
 viewer.addEventListener('ready', intro, { once: true });
 
 function intro() {
