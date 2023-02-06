@@ -1,5 +1,6 @@
 // JavaScript Document
 const img = window.location.search.split('=')[1];
+
 const panoMaxFov = 110; // 90, zoom out
 const panoMinFov = 10; // 30, zoom in
 
@@ -47,8 +48,7 @@ const viewer = new PhotoSphereViewer.Viewer({
 			title: 'Panorama view',
 			className: 'panorama-button',
 			onClick: (viewer) => {
-				intro()
-				//autorotate.start(),
+				intro(),
 			},
 		},
 	],
