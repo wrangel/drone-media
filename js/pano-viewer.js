@@ -48,7 +48,7 @@ const viewer = new PhotoSphereViewer.Viewer({
 			title: 'Panorama view',
 			className: 'panorama-button',
 			onClick: (viewer) => {
-				intro(),
+				intro();
 			},
 		},
 	],

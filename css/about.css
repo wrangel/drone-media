@@ -13,14 +13,13 @@ body {
   	background-size: cover;
 }
 
-.outer_a {
-	display: flex;
-  	justify-content: center;
-	text-align: center;
-}
-
-.inner_a {
+.container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	color: var(--fontcolor);
+	text-align: center;
 	/*mix-blend-mode: difference;*/ /* brilliant: change font according to ANY background */
 }
 
