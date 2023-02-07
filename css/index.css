@@ -1,4 +1,8 @@
 /* CSS Document */
+:root {
+	--sidebarcolor: cornflowerblue;
+}
+
 body {
 	background: url("../media/home-about/100_0148.webp") no-repeat center center fixed; 
   	-webkit-background-size: cover;
@@ -13,6 +17,6 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 3.6rem;
-	color: darkslategrey;
-	font-weight: 600;
+	color: var(--color);
+	font-weight: 500;
 }

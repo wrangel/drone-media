@@ -23,7 +23,7 @@
 }
 
 .sidebar-link:hover {
-	background-color: darkslategray;
+	background-color: var(--sidebarcolor);
 }
 
 .sidebar-link img {

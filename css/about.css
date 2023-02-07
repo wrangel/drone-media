@@ -1,6 +1,8 @@
 /* CSS Document */
-html {
-	--color: whitesmoke
+:root {
+	--sidebarcolor: cornflowerblue;
+	--color: blue; /* #551A8B */
+	--fontcolor: whitesmoke;
 }
 
 body {
@@ -15,12 +17,11 @@ body {
 	display: flex;
   	justify-content: center;
 	text-align: center;
-	align-items: center;
 }
 
 .inner_a {
-	color: var(--color);
-	mix-blend-mode: difference;
+	color: var(--fontcolor);
+	/*mix-blend-mode: difference;*/ /* brilliant: change font according to ANY background */
 }
 
 h1,
@@ -29,15 +30,12 @@ p {
 	font-weight: 300;
 }
 
-a:link {
-	color: var(--color);
+a:link,
+a:visited {
+	color: var(--fontcolor);
 	text-decoration: none;
 }
 
 a:hover {
-	color: cornflowerblue;
-	font-weight: 700;
+	color: var(--color);
 }
-
-a:
-
