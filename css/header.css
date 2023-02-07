@@ -1,4 +1,8 @@
 /* CSS Document */
+:root {
+	--color: cornflowerblue;
+}
+
 .header {
 	height: 55px;
 	background-color: white;
@@ -17,15 +21,22 @@
 	z-index: 100;
 }
 
+.header a {
+	color: var(--color);
+	font-size: 1.3rem;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.header img {
+	height: 50px;
+	cursor: pointer;
+}
+
 .left-section {
 	display: flex;
 	align-items: center;
 	padding-left: 74px;
-}
-
-.our-logo {
-	height: 50px;
-	cursor: pointer;
 }
 
 .right-section {
