@@ -15,7 +15,6 @@
 	margin-bottom: 4px;
 }
 
-.media-author, 
 .media-stats,
 #media-counter {
 	font-size: 12px;
@@ -35,10 +34,6 @@
 .thumbnail-row {
 	margin-bottom: 8px;
 	position: relative;
-}
-
-.media-author {
-	margin-bottom: 4px;
 }
 
 .media-grid {
