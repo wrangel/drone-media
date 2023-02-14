@@ -1,4 +1,8 @@
 /* CSS Document */
+
+img {
+	boder-radius: 1000000px;
+}
 .thumbnail {
 	width: 100%;
 }
